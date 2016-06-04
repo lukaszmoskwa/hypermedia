@@ -1,23 +1,29 @@
-<!-- <?php
-	echo "Hello world!"
-?> -->
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title> <!-- INSERT DEVICE NAME HERE -->
-	 	<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
-
-		<!-- jQuery library -->
-		<script src="js/jquery-1.12.0.min.js"></script>
-
-		<!-- Latest compiled JavaScript -->
-		<script src="js/bootstrap.min.js"></script> <!-- 3.3.6 -->
-	</head>
-	<body data-spy="scroll" data-target=".navbar">
-	<?php include 'header.html';?>
+<?php
+	require "db_connect.php"; //defines $servername, $username, $password, $db, $conn (holds the connection)
 	
-	</body>
-</html>
+
+	// Check connection
+	if ($conn->connect_error) {
+	    die("Connection failed: " . $conn->connect_error);
+	}
+	echo "Connected successfully";
+
+	if (isset($_GET["id"])) { //da mettere in sicurezza!
+		$sql = "SELECT * FROM Devices WHERE id=" . $_GET["id"]; //da mettere in sicurezza!
+	}
+	else {
+		$sql = "SELECT * FROM Devices";
+	}
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0) {
+	    // output data of each row
+	    while($row = $result->fetch_assoc()) {
+	        echo "id: " . $row["ID"]. " - Name: " . $row["Name"]. " " . "<img src=" . $row["ImageURL"]. "> <br>";
+	    }
+	} else {
+	    echo "0 results";
+	}
+
+	$conn->close();
+?> 
