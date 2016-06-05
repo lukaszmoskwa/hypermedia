@@ -15,9 +15,24 @@
 
 		<!-- Latest compiled JavaScript -->
 		<script src="js/bootstrap.min.js"></script> <!-- 3.3.6 -->
+		<script src="js/header.js"></script> <!-- script per header -->
+		<script>
+			//da spostare in scripts/
+			$(document).ready(function(){
+				$("#div1").load("devices.php",function(response, status, xhr){
+		        if(status == "success")
+		        	alert(response);
+		            //alert("External content loaded successfully!");
+		        if(status == "error")
+		            alert("Error"); //stampare un errore in modo migliore
+		    	});
+			});
+		</script>
 	</head>
 	<body data-spy="scroll" data-target=".navbar">
-	<?php include 'header.html';?>
+	<div id="header"></div>
+	<br><br><br><br><br><br>
+	<div id="div1"></div>
 	
 	</body>
 </html>
