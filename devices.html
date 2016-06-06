@@ -7,7 +7,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title> <!-- INSERT DEVICE NAME HERE -->
-	 	<!-- Latest compiled and minified CSS -->
+		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
 
 		<!-- jQuery library -->
@@ -19,13 +19,19 @@
 		<script>
 			//da spostare in scripts/
 			$(document).ready(function(){
-				$("#div1").load("devices.php",function(response, status, xhr){
-		        if(status == "success")
-		        	alert(response);
-		            //alert("External content loaded successfully!");
-		        if(status == "error")
-		            alert("Error"); //stampare un errore in modo migliore
-		    	});
+				$.get("devices.php",function(data, status) {
+					if(status == "success") {
+						result = JSON.parse(data);
+						if (result.length == 1) {
+							document.title = result[0]["Name"];
+						} else {
+							document.title = "Devices";
+						}
+					}
+					else if(status == "error") {
+						alert("Error"); //stampare un errore in modo migliore
+					}
+				});
 			});
 		</script>
 	</head>

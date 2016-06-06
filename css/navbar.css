@@ -1,0 +1,7 @@
+.navbar {
+	background-color: blue;
+	background-image: url("../images/banner_background_pronto.jpg");
+}
+.navbar a {
+    color: white !important;
+}

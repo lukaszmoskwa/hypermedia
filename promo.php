@@ -9,14 +9,7 @@
 	}
 	//echo "Connected successfully";
 
-	if (isset($_GET["id"])) { //da mettere in sicurezza!
-		$sql = "SELECT * FROM Devices WHERE id=" . $_GET["id"]; //da mettere in sicurezza!
-	} elseif (isset($_GET["category"])) {
-		//TODO (divides between smartphones, tablets, etc..)
-	}
-	else { //do we use this?
-		$sql = "SELECT * FROM Devices";
-	}
+	$sql = "SELECT * FROM Devices, SmartLife WHERE ?===true"; /* Togliere il commento quando si implementa il database
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
