@@ -9,7 +9,8 @@
 	}
 	//echo "Connected successfully";
 
-	$sql = "SELECT * FROM Devices, SmartLife WHERE ?===true"; /* Togliere il commento quando si implementa il database
+	//$sql = "SELECT * FROM Devices, SmartLife WHERE ?===true"; // Togliere il commento quando si implementa il database
+	$sql = "SELECT * FROM Devices"; //THIS QUERY IS NOT RIGHT, JUST FOR TESTING
 	$result = $conn->query($sql);
 
 	if ($result->num_rows > 0) {
