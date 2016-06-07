@@ -10,9 +10,9 @@
 	//echo "Connected successfully";
 
 	if (isset($_GET["id"])) { //da mettere in sicurezza!
-		$sql = "SELECT * FROM Devices WHERE id=" . $_GET["id"]; //da mettere in sicurezza!
-	} elseif (isset($_GET["category"])) {
-		//TODO (divides between smartphones, tablets, etc..)
+		$sql = "SELECT * FROM Devices WHERE ID=" . $_GET["id"]; //da mettere in sicurezza!
+	} elseif (isset($_GET["category"])) { //da mettere in sicurezza!
+		$sql = "SELECT * FROM Devices WHERE Category=" . $_GET["category"]; //da mettere in sicurezza!
 	}
 	else { //do we use this?
 		$sql = "SELECT * FROM Devices";

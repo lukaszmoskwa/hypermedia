@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Promotions</title>
+		<title>Smartphones</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
 
@@ -16,12 +16,11 @@
 		<script>
 			//da spostare in scripts/
 			$(document).ready(function(){
-				$.get("promo.php",function(data, status) { 
+				$.get("devices.php?category=\"Tablet\"",function(data, status) {
 					if(status == "success") {
 						result = JSON.parse(data);
 						for (i = 0; i < result.length; i++) {
-							//if (isadevice) //TODO
-							$('#devices').append(
+							$('#tablets').append(
 								"<a href=\"devices.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
 									"<div class=\"col-sm-6\">" + 
 										result[i]["Name"] +
@@ -29,8 +28,6 @@
 									"</div>" +
 								"</a>"
 							)
-							//else
-							//$('#promotions').append(...)
 						}
 					}
 					else if(status == "error") {
@@ -43,30 +40,10 @@
 	<body data-spy="scroll" data-target=".navbar">
 		<div id="header"></div>
 		<div id="path">
-			<a href="promo.html">Promotions</a>
+			<a href="devices.html">Devices</a> <a href="devicestablets.html">> Tablets</a>
 		</div>
-		<div id="devices">
-			<h1>Devices Promotions</h1>
+		<div id="tablets">
+			<h1>Tablets</h1>
 		</div>
-		<div id="smartlife">
-			<h1>Smart Life Services Promotions</h1>
-		</div>
-		<!--
-		<div class="row">
-			<div class="col-sm-6" id="smartphones">
-				<h1>Smartphones</h1>
-			</div>
-			<div class="col-sm-6" id="tablets">
-				<h1>Tablets</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6" id="smartliving">
-				<h1>TV & Smart Living</h1>
-			</div>
-			<div class="col-sm-6" id="networking">
-				<h1>Modem & Networking</h1>
-			</div>
-		</div> -->
 	</body>
 </html>

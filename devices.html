@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title> <!-- INSERT DEVICE NAME HERE -->
+		<title>Devices</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
 
@@ -15,7 +15,7 @@
 		<script src="js/header.js"></script> <!-- script per header -->
 		<script>
 			//da spostare in scripts/
-			$(document).ready(function(){
+			$(document).ready(function(){/*
 				$.get("devices.php",function(data, status) {
 					if(status == "success") {
 						result = JSON.parse(data);
@@ -29,21 +29,24 @@
 					else if(status == "error") {
 						alert("Error"); //stampare un errore in modo migliore
 					}
-				});
+				});*/
 			});
 		</script>
 	</head>
 	<body data-spy="scroll" data-target=".navbar">
 		<div id="header"></div>
+		<div id="path">
+			<a href="devices.html">Devices</a>
+		</div>
 		<div class="jumbotron">
 			<a href="promo.html"><h1>Tim Promotions</h1></a>
 		</div>
 		<div class="row">
 			<div class="col-sm-6" id="smartphones">
-				<h1>Smartphones</h1>
+				<a href="devicessmartphones.html"><h1>Smartphones</h1></a>
 			</div>
 			<div class="col-sm-6" id="tablets">
-				<h1>Tablets</h1>
+				<a href="devicestablets.html"><h1>Tablets</h1></a>
 			</div>
 		</div>
 		<div class="row">
