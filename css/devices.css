@@ -4,7 +4,6 @@ body {
 
 h1 {
 	color: black;
-	text-align: center;
 }
 
 p {
@@ -12,20 +11,44 @@ p {
 	font-size: 18px;
 }
 
-#image-div {
+.column{
+	flex-direction: column;
+}
+
+.left, .right {
+
+	display: inline-block;
+	width: 35%;
+	border: 2px solid blue; 
+	margin:10px;
+	font-size: 3vw;
+	color: white;
+	background: #0066cc;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+}
+.promo{
 	text-align: center;
-	display: flex;
-	font-size: 20px; //device name
-
+	padding-top: 60px;
 }
-#description-div {
-	text-align: left;
-	font-family: monospace;
-	font-size: 14
+.right a:visited{
+	color: white;
 }
+.right a:hover{
+	color: black;
+}
+.left a:visited{
+	color: white;
+}
+.left a:hover{
+	color: black;
+}
+.device_icons {
 
-#tech-spechs-div {
-	text-align: left;
- 	font-family: monospace;
- 	font-size: 14
+	max-width: 100%
+}
+.footer{
+	background-color: #00001a;
 }
