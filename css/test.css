@@ -1,0 +1,24 @@
+body {
+
+}
+
+h1 {
+    color: black;
+    text-align: center;
+}
+
+p {
+    font-family: monospace;;
+    font-size: 18px;
+}
+
+#imagediv {
+  text-align: center;
+  display: flex;
+  font-size: 20px; //device name
+
+}
+#descrdiv {
+  font-family: monospace;
+  font-size: 14
+}
