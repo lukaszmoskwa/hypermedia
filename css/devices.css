@@ -1,0 +1,31 @@
+body {
+
+}
+
+h1 {
+	color: black;
+	text-align: center;
+}
+
+p {
+	font-family: monospace;;
+	font-size: 18px;
+}
+
+#image-div {
+	text-align: center;
+	display: flex;
+	font-size: 20px; //device name
+
+}
+#description-div {
+	text-align: left;
+	font-family: monospace;
+	font-size: 14
+}
+
+#tech-spechs-div {
+	text-align: left;
+ 	font-family: monospace;
+ 	font-size: 14
+}
