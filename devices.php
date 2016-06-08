@@ -31,7 +31,7 @@
 		$sql = "SELECT D.ID, D.Name ImageURL, SL.ID, SL.Name FROM Devices AS D INNER JOIN DevicesSmartLife AS DSL ON D.ID = DSL.IDDevices INNER JOIN SmartLife AS SL ON DSL.IDSmartLife = SL.ID WHERE D.ID=" . $_GET["id"];
 		query($sql);
 		$sql = "SELECT D.ID, D.Name ImageURL, A.ID, A.Name, A.FAQ FROM Devices AS D INNER JOIN DevicesAssistance AS DA ON D.ID = DA.IDDevices INNER JOIN Assistance AS A ON DA.IDAssistance = A.ID WHERE D.ID=" . $_GET["id"];
-		$query($sql);
+		query($sql);
 	} elseif (isset($_GET["category"])) { //da mettere in sicurezza!
 		$sql = "SELECT * FROM Devices WHERE Category=" . $_GET["category"]; //da mettere in sicurezza!
 		query($sql);
