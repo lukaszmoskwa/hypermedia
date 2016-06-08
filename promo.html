@@ -20,17 +20,26 @@
 					if(status == "success") {
 						result = JSON.parse(data);
 						for (i = 0; i < result.length; i++) {
-							//if (isadevice) //TODO
-							$('#devices').append(
-								"<a href=\"devices.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
-									"<div class=\"col-sm-6\">" + 
-										result[i]["Name"] +
-										"<img class=\"img-responsive\" src=\"" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-									"</div>" +
-								"</a>"
-							)
-							//else
-							//$('#promotions').append(...)
+							if (result[i]["TechSpec"] != null) { //maybe change
+								$('#devices').append(
+									"<a href=\"devices.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+										"<div class=\"col-sm-4\">" + 
+											result[i]["Name"] +
+											"<img class=\"img-responsive\" src=\"" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+										"</div>" +
+									"</a>"
+								)
+							}
+							else {
+								$('#smartlife').append(
+									"<a href=\"smartlife.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+										"<div class=\"col-sm-4\">" + 
+											result[i]["Name"] +
+											"<img class=\"img-responsive\" src=\"" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+										"</div>" +
+									"</a>"
+								)
+							}
 						}
 					}
 					else if(status == "error") {
@@ -45,28 +54,11 @@
 		<div id="path">
 			<a href="promo.html">Promotions</a>
 		</div>
-		<div id="devices">
+		<div class="row" id="devices">
 			<h1>Devices Promotions</h1>
 		</div>
-		<div id="smartlife">
+		<div class="row" id="smartlife">
 			<h1>Smart Life Services Promotions</h1>
 		</div>
-		<!--
-		<div class="row">
-			<div class="col-sm-6" id="smartphones">
-				<h1>Smartphones</h1>
-			</div>
-			<div class="col-sm-6" id="tablets">
-				<h1>Tablets</h1>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-sm-6" id="smartliving">
-				<h1>TV & Smart Living</h1>
-			</div>
-			<div class="col-sm-6" id="networking">
-				<h1>Modem & Networking</h1>
-			</div>
-		</div> -->
 	</body>
 </html>

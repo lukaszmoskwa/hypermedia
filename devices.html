@@ -5,8 +5,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Devices</title>
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/devices.css"> <!-- 3.3.6 -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
+		<link rel="stylesheet" href="css/devices.css">
 
 		<!-- jQuery library -->
 		<script src="js/jquery-1.12.0.min.js"></script>
@@ -14,25 +14,7 @@
 		<!-- Latest compiled JavaScript -->
 		<script src="js/bootstrap.min.js"></script> <!-- 3.3.6 -->
 		<script src="js/header.js"></script> <!-- script per header -->
-		<script>
-			//da spostare in scripts/
-			$(document).ready(function(){/*
-				$.get("devices.php",function(data, status) {
-					if(status == "success") {
-						result = JSON.parse(data);
-						if (result.length == 1) {
-							document.title = result[0]["Name"];
-
-						} else {
-							document.title = "Devices";
-						}
-					}
-					else if(status == "error") {
-						alert("Error"); //stampare un errore in modo migliore
-					}
-				});*/
-			});
-		</script>
+		<script src="js/footer.js"></script> <!-- script per footer -->
 	</head>
 	<body data-spy="scroll" data-target=".navbar">
 		<div id="header"></div>
@@ -40,36 +22,30 @@
 			<a href="devices.html">Devices</a>
 		</div>
 		<div class="promo">
-			<a href="promo.html"><img src="images/bannerPromozioni.png" height="20%" width=73.5%"></a>
+			<a href="promo.html"><img src="images/bannerPromozioni.png" height="20%" width="73.5%"></a>
 		</div>
 		<br>
 		<div class="row" align="center">
-			<div class="left" id="smartphones">
+			<div class="col-sm-6 container" id="smartphones">
 				<a href="devicessmartphones.html">Smartphones<br>
 					<img src="images/Sfondo_cellulari.jpg" class="device_icons">
 				</a>
-			</div><div class="right" id="tablets">
+			</div><div class="col-sm-6 container" id="tablets">
 				<a href="devicestablets.html">Tablets<br>
 				<img src="images/Sfondo_tablet.jpg" class="device_icons"></a>
 			</div>
 		</div>
 		<div class="row" align="center">
-			<div class="left" id="smartliving">
+			<div class="col-sm-6 container" id="smartliving">
 				TV & Smart Living<br>
 				<img src="images/TimVision.jpg" class="device_icons">
 			</div>
-			<div class="right" id="network">
+			<div class="col-sm-6 container" id="network">
 				Modem & Networking<br>
 				<img src="images/Sfondo_NetworkRouter.jpg" class="device_icons">
 			</div>
 		</div>
 		<br><br><br>
 	</body>
-	<footer>
-		<div class="footer">
-		<br><br><br>
-		<div align="center"><h3>Hello, i'm the footaaaar</h3></div>
-		<br><br><br>
-		</div>
-	</footer>
+	<footer></footer>
 </html>

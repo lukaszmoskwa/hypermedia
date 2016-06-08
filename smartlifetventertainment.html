@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>TV & Entertainment</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
+
+		<!-- jQuery library -->
+		<script src="js/jquery-1.12.0.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="js/bootstrap.min.js"></script> <!-- 3.3.6 -->
+		<script src="js/header.js"></script> <!-- script per header -->
+		<script>
+			//da spostare in scripts/
+			$(document).ready(function(){
+				$.get("smartlife.php?category=\"TV and Entertainment\"",function(data, status) {
+					if(status == "success") {
+						result = JSON.parse(data);
+						for (i = 0; i < result.length; i++) {
+							$('#tventertainment').append(
+								"<a href=\"smartlife.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+									"<div class=\"col-sm-6\">" + 
+										result[i]["Name"] +
+										"<img class=\"img-responsive\" src=\"" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+									"</div>" +
+								"</a>"
+							)
+						}
+					}
+					else if(status == "error") {
+						alert("Error"); //stampare un errore in modo migliore
+					}
+				});
+			});
+		</script>
+	</head>
+	<body data-spy="scroll" data-target=".navbar">
+		<div id="header"></div>
+		<div id="path">
+			<a href="devices.html">Devices</a> <a href="devicessmartphones.html">> Smartphones</a>
+		</div>
+		<div id="tventertainment">
+			<h1>TV & Entertainment</h1>
+		</div>
+	</body>
+</html>

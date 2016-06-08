@@ -9,7 +9,6 @@
 	}
 	//echo "Connected successfully";
 
-	//$sql = "SELECT * FROM Devices, SmartLife WHERE ?===true"; // Togliere il commento quando si implementa il database
 	$sql = "SELECT * FROM Devices WHERE OldPrice IS NOT NULL"; //SmartLife is missing (maybe also don't use * if we don't need all the data)
 	$result = $conn->query($sql);
 
@@ -18,10 +17,26 @@
 	    while($row = $result->fetch_assoc()) {
 	        $res[] = $row; //adds $row to the $res array
 	    }
-	    echo json_encode($res);
+	    //echo json_encode($res);
 	} else {
-	    echo "0 results"; //maybe print a better message
+	    //echo "0 results"; //maybe print a better message
 	}
+
+	//$res = []; 
+	$sql = "SELECT * FROM SmartLife WHERE OldPrice IS NOT NULL"; //SmartLife is missing (maybe also don't use * if we don't need all the data)
+	$result = $conn->query($sql);
+
+	if ($result->num_rows > 0) {
+	    // output data of each row
+	    while($row = $result->fetch_assoc()) {
+	        $res[] = $row; //adds $row to the $res array
+	    }
+	    //echo json_encode($res);
+	} else {
+	    //echo "0 results"; //maybe print a better message
+	}
+
+	echo json_encode($res);
 
 	$conn->close();
 ?> 

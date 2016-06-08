@@ -15,11 +15,11 @@ p {
 	flex-direction: column;
 }
 
-.left, .right {
+.container {
 
-	display: inline-block;
+	/*display: inline-block;*/
 	width: 35%;
-	border: 2px solid blue; 
+	border: 2px solid blue;
 	margin:10px;
 	font-size: 3vw;
 	color: white;
@@ -33,22 +33,13 @@ p {
 	text-align: center;
 	padding-top: 60px;
 }
-.right a:visited{
+.container a:visited{
 	color: white;
 }
-.right a:hover{
-	color: black;
-}
-.left a:visited{
-	color: white;
-}
-.left a:hover{
+.container a:hover{
 	color: black;
 }
 .device_icons {
 
 	max-width: 100%
-}
-.footer{
-	background-color: #00001a;
 }
