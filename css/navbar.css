@@ -1,3 +1,7 @@
+body {
+	padding-top: 50px;
+}
+
 .navbar {
 	background-color: blue;
 	background-image: url("../images/banner_background_pronto.jpg");
