@@ -25,7 +25,8 @@
 	//echo "Connected successfully";
 
 	if (isset($_GET["id"])) { //da mettere in sicurezza!
-		$sql = "SELECT * FROM Assistance WHERE ID=" . $_GET["id"]; //da mettere in sicurezza!
+		//$sql = "SELECT * FROM Assistance WHERE ID=" . $_GET["id"]; //da mettere in sicurezza!
+		$sql = "SELECT D.ID, D.Name ImageURL, A.ID, A.Name, A.FAQ FROM Devices AS D INNER JOIN DevicesAssistance AS DA ON D.ID = DA.IDDevices INNER JOIN Assistance AS A ON DA.IDAssistance = A.ID WHERE A.ID=" . $_GET["id"]; //da mettere in sicurezza!
 	} elseif (isset($_GET["category"])) { //da mettere in sicurezza!
 		$sql = "SELECT * FROM Assistance WHERE Category=" . $_GET["category"]; //da mettere in sicurezza!
 	}
