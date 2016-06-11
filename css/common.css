@@ -1,0 +1,9 @@
+/*Questo css è incluso in ogni file per mostrare la path
+e il titolo della pagina in CSS*/
+#vwtitle h1{
+	font-size: 5vw;
+}
+#path{
+	padding-top: 1vw;	
+	font-size: 1.7vw;
+}
