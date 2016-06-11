@@ -19,15 +19,35 @@
 				$.get("assistance.php?category=\"Technical Support\"",function(data, status) {
 					if(status == "success") {
 						result = JSON.parse(data);
-						for (i = 0; i < result.length; i++) {
-							$('#technicalsupport').append(
-								"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
-									"<div class=\"col-sm-6\">" + 
-										result[i]["Name"] +
-										"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-									"</div>" +
-								"</a>"
-							)
+						for (i = 0; i < result.length; i++) { //THIS WILL BE MOVED TO A FUNCTION IN ORDER NOT TO COPY PASTE CODE
+							if (result[i]["SubCategory"] == "Smartphone and Tablet") {
+								$('#smartphonetablets').append(
+									"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+										"<div class=\"col-sm-6\">" + 
+											result[i]["Name"] +
+											"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+										"</div>" +
+									"</a>"
+								)
+							} else if (result[i]["SubCategory"] == "ADSL") {
+								$('#adsl').append(
+									"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+										"<div class=\"col-sm-6\">" + 
+											result[i]["Name"] +
+											"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+										"</div>" +
+									"</a>"
+								)
+							} else if (result[i]["SubCategory"] == "Mail") {
+								$('#mail').append(
+									"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+										"<div class=\"col-sm-6\">" + 
+											result[i]["Name"] +
+											"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+										"</div>" +
+									"</a>"
+								)
+							}
 						}
 					}
 					else if(status == "error") {
@@ -44,6 +64,16 @@
 		</div>
 		<div id="technicalsupport">
 			<h1>Technical Support</h1>
+			<div id="smartphonetablets">
+				<h1>Smartphone and Tablets</h1>
+			</div>
+			<div id="adsl">
+				<h1>ADSL</h1>
+			</div>
+			<div id="mail">
+				<h1>Mail</h1>
+			</div>
 		</div>
+
 	</body>
 </html>
