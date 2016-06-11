@@ -1,0 +1,17 @@
+.blue-container{
+
+	display: inline-block;
+
+	width: 30vw;
+	border: 0.5vw solid blue;
+	border-radius: 30%;
+}
+.moveup{
+	vertical-align: middle;
+	align-items: center;
+	padding-top: 1vw;
+	
+}
+.assistance-icons{
+	/*float: right;*/
+}

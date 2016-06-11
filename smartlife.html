@@ -6,8 +6,8 @@
 		<title>Smart Life</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
-		<link rel="stylesheet" href="css/smartlife.css">
 		<link rel="stylesheet" href="css/promo.css">
+		<link rel="stylesheet" href="css/common.css">
 
 		<!-- jQuery library -->
 		<script src="js/jquery-1.12.0.min.js"></script>
@@ -19,33 +19,34 @@
 	</head>
 	<body data-spy="scroll" data-target=".navbar">
 		<div id="header"></div>
-		<div id="path">
-			<a href="smartlife.html">Smart Life</a>
+		<div id="path" class="row">
+			<div class="col-xs-2 col-xs-offset-1"> <!-- Usato per spostarsi di un certo offset rispetto al lato sinistro-->
+				<a href="smartlife.html">Smart Life</a>
+			</div>
 		</div>
+		<div id="vwtitle" align="center" class="row"><h1>Smart Life</h1></div> <!--Big title-->
 		<div class="promo col-xs-12x">
-			<a href="promo.html"><img class="img-responsive" src="images/bannerPromozioni.png"></a>
+			<a href="promo.html"><img class="icons img-responsive" src="images/bannerPromozioni.png"></a>
 		</div>
-		<br>
 		<div class="row" align="center">
-			<div class="col-xs-6 container" id="health">
+			<div class="col-xs-6 container">
 				Health<br>
-				<img src="images/467289-best-fitness-app-round-up.jpg" class="device_icons img-responsive">
-			</div><div class="col-xs-6 container" id="tablets">
+				<img src="images/healthcare.png" class="img-responsive">
+			</div><div class="col-xs-6 container">
 				<a href="smartlifetventertainment.html">TV and Entertainment<br>
-				<img src="images/satellite-entertainment.png" class="device_icons img-responsive"></a>
+				<img src="images/satellite-entertainment.png" class="icons img-responsive"></a>
 			</div>
 		</div>
 		<div class="row" align="center">
-			<div class="col-xs-6 container" id="smartliving">
+			<div class="col-xs-6 container">
 				Home<br>
-				<img src="images/casa.png" class="device_icons img-responsive">
+				<img src="images/casa.png" class="icons img-responsive">
 			</div>
-			<div class="col-xs-6 container" id="network">
+			<div class="col-xs-6 container">
 				Person<br>
-				<img src="images/servizi-alla-persona.png" class="device_icons img-responsive">
+				<img src="images/servizi-alla-persona.png" class="icons img-responsive">
 			</div>
 		</div>
-		<br><br><br>
 	</body>
 	<footer></footer>
 </html>
