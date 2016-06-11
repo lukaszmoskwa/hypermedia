@@ -1,3 +1,7 @@
 .footer{
 	background-color: #00001a;
+	text-align: center;
+}
+.footertext{
+	color: white;
 }
