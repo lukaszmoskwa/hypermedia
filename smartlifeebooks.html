@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>eBooks</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
+
+		<!-- jQuery library -->
+		<script src="js/jquery-1.12.0.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="js/bootstrap.min.js"></script> <!-- 3.3.6 -->
+		<script src="js/header.js"></script> <!-- script per header -->
+		<script>
+			//da spostare in scripts/
+			$(document).ready(function(){
+				$.get("smartlife.php?category=\"eBook\"",function(data, status) {
+					if(status == "success") {
+						result = JSON.parse(data);
+						for (i = 0; i < result.length; i++) {
+							$('#ebooks').append(
+								"<a href=\"smartlife.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+									"<div class=\"col-sm-6\">" + 
+										result[i]["Name"] +
+										"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+										result[i]["Price"] +
+									"</div>" +
+								"</a>"
+							)
+						}
+					}
+					else if(status == "error") {
+						alert("Error"); //stampare un errore in modo migliore
+					}
+				});
+			});
+		</script>
+	</head>
+	<body data-spy="scroll" data-target=".navbar">
+		<div id="header"></div>
+		<div id="path">
+			<h1>DA MODIFICARE IL PATH</h1>
+			<a href="smartlife.html">Smart Life</a> <a href="smartlifetventertainment.html">> TV & Entertainment</a>
+		</div>
+		<div id="ebooks">
+			<h1>eBooks</h1>
+		</div>
+	</body>
+</html>
