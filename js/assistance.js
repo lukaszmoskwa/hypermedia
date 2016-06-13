@@ -14,6 +14,11 @@ $(document).ready(function(){
 				$("#title").text(result[0]["Name"]);
 				$("#description").text(result[0]["Description"]);
 				$("#faq").text(result[0]["FAQ"]);
+				for (i = 0; i < result.length; i++) {
+					if (result[i]["D_ID"] != null) {
+						$("#devices").append("<div><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "</a></div>");
+					}
+				}
 			}
 			else if(status == "error") {
 				alert("Error"); //stampare un errore in modo migliore

@@ -20,6 +20,11 @@ $(document).ready(function(){
 				$("#activationandrules").text(result[0]["ActivationAndRules"]);
 				$("#price").text(result[0]["Price"]);
 				$("#oldprice").text(result[0]["OldPrice"]);
+				for (i = 0; i < result.length; i++) {
+					if (result[i]["D_ID"] != null) {
+						$("#devices").append("<div><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "</a></div>");
+					}
+				}
 			}
 			else if(status == "error") {
 				alert("Error"); //stampare un errore in modo migliore

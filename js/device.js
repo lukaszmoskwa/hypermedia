@@ -20,6 +20,13 @@ $(document).ready(function(){
 				$("#description").text(result[0]["Description"]);
 				$("#price").text(result[0]["Price"]);
 				$("#oldprice").text(result[0]["OldPrice"]);
+				for (i = 0; i < result.length; i++) {
+					if (result[i]["SL_ID"] != null) {
+						$("#smartlife").append("<div><a href=\"smartlifesingle.html?id=" + result[i]["SL_ID"] + "\">" + result[i]["SL_Name"] + "</a></div>");
+					} else if (result[i]["A_ID"] != null) {
+						$("#assistance").append("<div><a href=\"assistancesingle.html?id=" + result[i]["A_ID"] + "\">" + result[i]["A_Name"] + "</a></div>");
+					}
+				}
 			}
 			else if(status == "error") {
 				alert("Error"); //stampare un errore in modo migliore
