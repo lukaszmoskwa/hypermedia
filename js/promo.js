@@ -5,7 +5,7 @@ $(document).ready(function(){
 			for (i = 0; i < result.length; i++) {
 				if (result[i]["TechSpec"] != null) { //maybe change
 					$('#devices').append(
-						"<a href=\"devices.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+						"<a href=\"device.html?id=" + result[i]["ID"] + "\">" + //must link to an html instead
 							"<div class=\"col-md-3\">" + 
 								result[i]["Name"] +
 								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
