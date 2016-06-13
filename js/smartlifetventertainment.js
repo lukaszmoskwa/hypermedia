@@ -4,7 +4,7 @@ $(document).ready(function(){
 			result = JSON.parse(data);
 			for (i = 0; i < result.length; i++) {
 				$('#tventertainment').append(
-					"<a href=\"smartlife.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+					"<a href=\"smartlifesingle.html?id=" + result[i]["ID"] + "\">" + //should change html name
 						"<div class=\"col-sm-6 container\" align=\"center\">" + 
 							result[i]["Name"] +
 							"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +

@@ -26,7 +26,7 @@
 
 	if (isset($_GET["id"])) { //da mettere in sicurezza!
 		//$sql = "SELECT * FROM SmartLife WHERE ID=" . $_GET["id"]; //da mettere in sicurezza!
-		$sql = "SELECT D.ID, D.Name ImageURL, SL.ID, SL.Name FROM Devices AS D INNER JOIN DevicesSmartLife AS DSL ON D.ID = DSL.IDDevices INNER JOIN SmartLife AS SL ON DSL.IDSmartLife = SL.ID WHERE SL.ID=" . $_GET["id"]; //da mettere in sicurezza!
+		$sql = "SELECT SL.ID, SL.Category, SL.Name, SL.ImageURL, SL.Description, SL.ActivationAndRules, SL.Price, SL.OldPrice, D.ID AS D_ID, D.Name AS D_Name FROM Devices AS D INNER JOIN DevicesSmartLife AS DSL ON D.ID = DSL.IDDevices INNER JOIN SmartLife AS SL ON DSL.IDSmartLife = SL.ID WHERE SL.ID=" . $_GET["id"]; //da mettere in sicurezza!
 	} elseif (isset($_GET["category"])) { //da mettere in sicurezza!
 		$sql = "SELECT * FROM SmartLife WHERE Category=" . $_GET["category"]; //da mettere in sicurezza!
 	}

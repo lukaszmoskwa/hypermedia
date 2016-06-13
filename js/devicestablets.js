@@ -4,7 +4,7 @@ $(document).ready(function(){
 			result = JSON.parse(data);
 			for (i = 0; i < result.length; i++) {
 				$('#tablets').append(
-					"<a href=\"device.html?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+					"<a href=\"device.html?id=" + result[i]["ID"] + "\">" +
 						"<div class=\"col-sm-6\">" + 
 							result[i]["Name"] +
 							"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
