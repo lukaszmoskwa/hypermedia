@@ -26,7 +26,7 @@
 
 	if (isset($_GET["id"])) { //da mettere in sicurezza!
 		//$sql = "SELECT * FROM Assistance WHERE ID=" . $_GET["id"]; //da mettere in sicurezza!
-		$sql = "SELECT D.ID, D.Name ImageURL, A.ID, A.Name, A.FAQ FROM Devices AS D INNER JOIN DevicesAssistance AS DA ON D.ID = DA.IDDevices INNER JOIN Assistance AS A ON DA.IDAssistance = A.ID WHERE A.ID=" . $_GET["id"]; //da mettere in sicurezza!
+		$sql = "SELECT A.ID, A.Category, A.Name, A.Description, A.FAQ, D.ID AS D_ID, D.Name AS D_Name, ImageURL FROM Devices AS D INNER JOIN DevicesAssistance AS DA ON D.ID = DA.IDDevices INNER JOIN Assistance AS A ON DA.IDAssistance = A.ID WHERE A.ID=" . $_GET["id"]; //da mettere in sicurezza!
 	} elseif (isset($_GET["highlight"])) { //da mettere in sicurezza!
 		$sql = "SELECT * FROM Assistance WHERE Highlight=" . $_GET["highlight"]; //da mettere in sicurezza!
 	} elseif (isset($_GET["category"])) { //da mettere in sicurezza!

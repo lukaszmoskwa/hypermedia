@@ -5,7 +5,7 @@ $(document).ready(function(){
 			for (i = 0; i < result.length; i++) { //THIS WILL BE MOVED TO A FUNCTION IN ORDER NOT TO COPY PASTE CODE
 				if (result[i]["SubCategory"] == "Smartphone and Tablet") {
 					$('#smartphonetablets').append(
-						"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" + //must link to an html instead
 							"<div class=\"col-sm-6\">" + 
 								result[i]["Name"] +
 								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
@@ -14,7 +14,7 @@ $(document).ready(function(){
 					)
 				} else if (result[i]["SubCategory"] == "ADSL") {
 					$('#adsl').append(
-						"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" + //must link to an html instead
 							"<div class=\"col-sm-6\">" + 
 								result[i]["Name"] +
 								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
@@ -23,7 +23,7 @@ $(document).ready(function(){
 					)
 				} else if (result[i]["SubCategory"] == "Mail") {
 					$('#mail').append(
-						"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" + //must link to an html instead
 							"<div class=\"col-sm-6\">" + 
 								result[i]["Name"] +
 								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
