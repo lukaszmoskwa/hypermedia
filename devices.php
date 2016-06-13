@@ -28,7 +28,7 @@
 
 	if (isset($_GET["id"])) { //da mettere in sicurezza!
 		//$sql = "SELECT * FROM Devices WHERE ID=" . $_GET["id"]; //da mettere in sicurezza! (vecchia query)
-		$sql = "SELECT D.ID, D.Name, D.ImageURL, TechSpec, D.Description, D.Price, D.OldPrice, SL.ID AS SL_ID, SL.Name AS SL_Name FROM Devices AS D INNER JOIN DevicesSmartLife AS DSL ON D.ID = DSL.IDDevices INNER JOIN SmartLife AS SL ON DSL.IDSmartLife = SL.ID WHERE D.ID=" . $_GET["id"];
+		$sql = "SELECT D.ID, D.Category, D.Name, D.ImageURL, TechSpec, D.Description, D.Price, D.OldPrice, SL.ID AS SL_ID, SL.Name AS SL_Name FROM Devices AS D INNER JOIN DevicesSmartLife AS DSL ON D.ID = DSL.IDDevices INNER JOIN SmartLife AS SL ON DSL.IDSmartLife = SL.ID WHERE D.ID=" . $_GET["id"];
 		query($sql);
 		$sql = "SELECT D.ID, D.Name, D.ImageURL, A.ID AS A_ID, A.Name AS A_NAME, A.FAQ FROM Devices AS D INNER JOIN DevicesAssistance AS DA ON D.ID = DA.IDDevices INNER JOIN Assistance AS A ON DA.IDAssistance = A.ID WHERE D.ID=" . $_GET["id"];
 		query($sql);
