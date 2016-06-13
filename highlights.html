@@ -6,6 +6,8 @@
 		<title>Highlights</title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" href="css/highlights.css">
 
 		<!-- jQuery library -->
 		<script src="js/jquery-1.12.0.min.js"></script>
@@ -18,11 +20,18 @@
 	<body data-spy="scroll" data-target=".navbar">
 		<div id="header"></div>
 		<div class="container">
-			<div id="path">
-				<a href="highlights.html">Highlights</a>
+			<div id="path" class="row">
+				<div class="col-xs-1 col-xs-offset-1"> <!-- Usato per spostarsi di un certo offset rispetto al lato sinistro-->
+					<a href="highlights.html">Highlights</a>
+				</div>
 			</div>
-			<div id="highlights">
-				<h1>Highlights</h1>
+			<div id="vwtitle" align="center"><h1>Highlights</h1></div>
+			<div class="row" align="center">
+				<div class="col-xs-8 col-xs-offset-2">
+					<img src="images/Sfondo_assistenza.jpg" class="img-responsive image-padding" align="center">
+				</div>
+				<div id="highlights" class="col-xs-8 col-xs-offset-2">		
+				</div>
 			</div>
 			<footer></footer>
 		</div>

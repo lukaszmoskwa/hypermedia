@@ -4,12 +4,13 @@ $(document).ready(function(){
 			result = JSON.parse(data);
 			for (i = 0; i < result.length; i++) {
 				$('#highlights').append(
-					"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
-						"<div class=\"col-sm-6\">" + 
-							result[i]["Name"] +
-							"<img class=\"img-responsive\" src=\"" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-						"</div>" +
-					"</a>"
+					"<div class=\"custom-padding\">" + 
+						"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+							"<div align=\"center\" class=\"single-content\">" + 
+								result[i]["Name"] +
+							"</div>" +
+						"</a>" +
+					"</div>"
 				)
 			}
 		}

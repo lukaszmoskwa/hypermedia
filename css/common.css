@@ -19,7 +19,7 @@ e il titolo della pagina in CSS*/
 }
 .container a:visited{
 	/*Queste impostazioni sono per i contenuti cliccabili*/
-	color: black;
+	/*color: black;*/
 }
 .container a:hover{
 	color: blue;
