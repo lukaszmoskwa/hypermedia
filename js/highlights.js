@@ -5,7 +5,7 @@ $(document).ready(function(){
 			for (i = 0; i < result.length; i++) {
 				$('#highlights').append(
 					"<div class=\"custom-padding\">" + 
-						"<a href=\"assistance.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
+						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" +
 							"<div align=\"center\" class=\"single-content\">" + 
 								result[i]["Name"] +
 							"</div>" +
