@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="css/navbar.css">
 <script src="js/navbar.js"></script>
+<script src="js/cookie.js"></script> <!-- script per manipolare i cookie -->
+<script src="js/cart.js"></script> <!-- script per manipolare il carrello -->
+<script src="js/cartcount.js"></script> <!-- script per contare il numero di elementi nel carrello -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 	<!--<div class="container"> -->
 		<div class="navbar-header">
@@ -19,7 +22,7 @@
   			<a class="navbar-brand" href="#">
   				logo
   			</a> -->
-			<a class="navbar-brand show-only-small-screen" id="cart"><span class="glyphicon glyphicon-shopping-cart"></span> (0)</a> <!-- will be changed with the number of cart items -->
+			<a class="navbar-brand cart show-only-small-screen" id="cart"><span class="glyphicon glyphicon-shopping-cart"></span> (0)</a> <!-- will be changed with the number of cart items -->
 		</div>
 		<div class="collapse navbar-collapse" id="Navbar">
 			<ul class="nav navbar-nav">
@@ -29,7 +32,7 @@
 				<li><a href="#page4">Contacts</a></li> -->
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a id="cart"><span class="glyphicon glyphicon-shopping-cart"></span> (0)</a> <!-- will be changed with the number of cart items --> <!-- navbar-brand -->
+				<li><a href="cart.html" class="cart"><span class="glyphicon glyphicon-shopping-cart"></span> (0)</a> <!-- will be changed with the number of cart items --> <!-- navbar-brand -->
 				<li><a href="whoweare.html">Who we are</a></li> <!-- <li class="active"> -->
 				<li><a href="thegroup.html">The Group</a></li>
 			</ul>

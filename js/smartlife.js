@@ -20,6 +20,12 @@ $(document).ready(function(){
 				$("#activationandrules").text(result[0]["ActivationAndRules"]);
 				$("#price").text(result[0]["Price"]);
 				$("#oldprice").text(result[0]["OldPrice"]);
+				$("#addcart").click(function(){
+					addItem("smartlife",result[0]["ID"]);
+				});
+				$("#removecart").click(function(){
+					removeItem("smartlife",result[0]["ID"]);
+				});
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["D_ID"] != null) {
 						$("#devices").append("<div><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "</a></div>");

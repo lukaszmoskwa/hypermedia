@@ -9,8 +9,11 @@ body {
 .navbar a {
     color: white !important;
 }
-#cart {
+.cart {
     float: right;
+}
+#menu-toggle {
+    float: left;
 }
 
 
