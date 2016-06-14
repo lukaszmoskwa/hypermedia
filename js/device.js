@@ -20,6 +20,24 @@ $(document).ready(function(){
 				$("#description").text(result[0]["Description"]);
 				$("#price").text(result[0]["Price"]);
 				$("#oldprice").text(result[0]["OldPrice"]);
+
+				found = false;
+				$.getScript("js/cookie.js", function() { //we defined the function to manipulate cookies here
+					$.getScript("js/cart.js", function() { //we defined the function to manipulate the cart here
+						devices = show("devices");
+						for (i = 0; i < devices.length; i++) {
+							if (devices[i] == result[0]["ID"]) {
+								found = true;
+							}
+						}
+						if (found) {
+							$("#addcart").hide();
+						} else {
+							$("#removecart").hide();
+						}
+					});
+				});
+				
 				$("#addcart").click(function(){
 					addItem("devices",result[0]["ID"]);
 				});
