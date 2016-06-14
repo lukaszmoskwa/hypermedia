@@ -9,6 +9,9 @@ body {
 .navbar a {
     color: white !important;
 }
+#cart {
+    float: right;
+}
 
 
 #sidebar-wrapper {
