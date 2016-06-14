@@ -27,10 +27,10 @@ function resize() {
 	if(contW >= 751){
 		document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
 		document.getElementsByClassName("container")[0].style.paddingLeft="200px"
-		$(".show-on-small-screen").hide();
+		$(".show-only-small-screen").hide();
 	}else{
 		document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
 		document.getElementsByClassName("container")[0].style.paddingLeft="0px"
-		$(".show-on-small-screen").show();
+		$(".show-only-small-screen").show();
 	}
 }
