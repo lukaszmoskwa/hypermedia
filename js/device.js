@@ -19,7 +19,8 @@ $(document).ready(function(){
 				$("#techspec").text(result[0]["TechSpec"]);
 				$("#description").text(result[0]["Description"]);
 				$("#price").text(result[0]["Price"]);
-				$("#oldprice").text(result[0]["OldPrice"]);
+				if (result[0]["OldPrice"]!=null)
+				{$("#oldprice").text (result[0]["OldPrice"]);}
 
 				found = false;
 				$.getScript("js/cookie.js", function() { //we defined the function to manipulate cookies here
