@@ -1,0 +1,15 @@
+.price{
+	font-size: 1.3vw;
+	color: red;
+}
+.oldprice{
+	font-size: 1.3vw;
+	color: red;
+}
+.blue_style{
+
+	color: blue;
+	font-family: monospace;
+	font-size: 150%;
+	padding-bottom: 2%;
+}

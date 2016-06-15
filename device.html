@@ -6,6 +6,7 @@
 		<title></title>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
+		<link rel="stylesheet" href="css/device.css">
 
 		<!-- jQuery library -->
 		<script src="js/jquery-1.12.0.min.js"></script>
@@ -24,15 +25,27 @@
 			</div>
 			<div id="device">
 				<h1 id="title"></h1>
-				<img id="image" class="img-responsive">
-				<div id="techspec"></div>
-				<div id="description"></div>
-				<div id="price"></div>
-				<div id="oldprice"></div>
+				<div class="row">
+					<div id="techspec" class="col-xs-6"></div>
+					<img id="image" class="img-responsive col-xs-6">
+				</div>	
+				<div class="row">
+					<div id="description col-xs-6 col-xs-offset-6"></div>
+				</div>
+				<div class="row">
+					<div id="price" class="price col-xs-3 col-xs-offset-6"></div>
+					<div id="oldprice" class="col-xs-3">
+				</div>	
 				<button id="addcart">Add to cart</button>
 				<button id="removecart">Remove from cart</button>
-				<div id="smartlife"></div>
-				<div id="assistance"></div>
+				<div class="row">
+					<div class="blue_style col-xs-12">Assistance</div>	
+					<div id="assistance"></div>	
+				</div>
+				<div class="row">
+					<div class="blue_style col-xs-12">Smart Life</div>	
+					<div id="smartlife"></div>
+				</div>	
 			</div>
 			<footer></footer>
 		</div>
