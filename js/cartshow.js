@@ -29,7 +29,7 @@ $(document).ready(function(){
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["ID"] == smartlife[j]) {
 						$("#cartsl").append(
-							"<a href=\"smartlife.html?id=" + result[i]["ID"] + "\">" +
+							"<a href=\"smartlifesingle.html?id=" + result[i]["ID"] + "\">" +
 									"<div class=\"col-md-6\">" + 
 										result[i]["Name"] +
 										"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +

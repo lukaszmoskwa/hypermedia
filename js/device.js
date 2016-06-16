@@ -41,9 +41,13 @@ $(document).ready(function(){
 				
 				$("#addcart").click(function(){
 					addItem("devices",result[0]["ID"]);
+					$("#addcart").hide();
+					$("#removecart").show();
 				});
 				$("#removecart").click(function(){
 					removeItem("devices",result[0]["ID"]);
+					$("#removecart").hide();
+					$("#addcart").show();
 				});
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["SL_ID"] != null) {

@@ -1,1 +1,0 @@
-$(".cart").html("<span class=\"glyphicon glyphicon-shopping-cart\"></span> (" + (show("devices").length + show("smartlife").length) + ")");

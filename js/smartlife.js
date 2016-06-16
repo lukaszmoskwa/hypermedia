@@ -40,14 +40,21 @@ $(document).ready(function(){
 
 				$("#addcart").click(function(){
 					addItem("smartlife",result[0]["ID"]);
+					$("#addcart").hide();
+					$("#removecart").show();
 				});
 				$("#removecart").click(function(){
 					removeItem("smartlife",result[0]["ID"]);
+					$("#removecart").hide();
+					$("#addcart").show();
 				});
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["D_ID"] != null) {
 						$("#devices").append("<div><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "</a></div>");
 					}
+				}
+				if (result[0]["ID"] == 1) {
+					$("#subcategory").show();
 				}
 			}
 			else if(status == "error") {

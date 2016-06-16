@@ -12,6 +12,7 @@ function addItem(cookie, id) {
 	}
 	cart.push(id); //aggiunge id all'array
 	setCookie(cookie, JSON.stringify(cart), 30);
+	updateCount();
 }
 function removeItem(cookie, id) {
 	cart = []
@@ -22,6 +23,7 @@ function removeItem(cookie, id) {
 	    }
 	}
 	setCookie(cookie, JSON.stringify(cart), 30);
+	updateCount();
 }
 function show(cookie) {
 	if (getCookie(cookie) != "") {
@@ -29,3 +31,7 @@ function show(cookie) {
 	}
 	return [];
 }
+function updateCount() {
+	$(".cart").html("<span class=\"glyphicon glyphicon-shopping-cart\"></span> (" + (show("devices").length + show("smartlife").length) + ")");
+}
+updateCount();
