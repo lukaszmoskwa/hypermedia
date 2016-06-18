@@ -5,13 +5,13 @@ $(document).ready(function(){
 				result = JSON.parse(data); //we only receive 1 result (result[0])
 				document.title = result[0]["Name"];
 				if (result[0]["Category"] === "TV and Entertainment") {
-					$("#slcategory").text("> TV and Entertainment");
+					$("#slcategory").text("TV and Entertainment");
 					$("#slcategory").attr("href","smartlifetventertainment.html");
 				}/* else if (result[0]["Category"] === "") {
 					$("#slcategory").text("> Tablets");
 					$("#slcategory").attr("href","devicestablets.html");
 				}*/
-				$("#slpath").text("> " + result[0]["Name"])
+				$("#slpath").text(result[0]["Name"])
 							.attr("href","smartlifesingle.html?id=" + result[0]["ID"]);
 
 				$("#title").text(result[0]["Name"]);
