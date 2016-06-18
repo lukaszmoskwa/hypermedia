@@ -16,8 +16,8 @@ $(document).ready(function(){
 
 				$("#title").text(result[0]["Name"]);
 				$("#image").attr("src", "images/" + result[0]["ImageURL"]);
-				$("#description").text(result[0]["Description"]);
-				$("#activationandrules").text(result[0]["ActivationAndRules"]);
+				$("#description").append(result[0]["Description"]);
+				$("#activationandrules").append(result[0]["ActivationAndRules"]);
 				$("#price").text(result[0]["Price"]);
 				$("#oldprice").text(result[0]["OldPrice"]);
 

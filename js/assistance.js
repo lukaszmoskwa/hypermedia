@@ -12,8 +12,8 @@ $(document).ready(function(){
 								.attr("href","assistancesingle.html?id=" + result[0]["ID"]);
 
 				$("#title").text(result[0]["Name"]);
-				$("#description").text(result[0]["Description"]);
-				$("#faq").text(result[0]["FAQ"]);
+				$("#description").append(result[0]["Description"]);
+				$("#faq").append(result[0]["FAQ"]);
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["D_ID"] != null) {
 						$("#devices").append("<div><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "</a></div>");
