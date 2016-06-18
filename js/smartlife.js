@@ -50,7 +50,7 @@ $(document).ready(function(){
 				});
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["D_ID"] != null) {
-						$("#devices").append("<div><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "</a></div>");
+						$("#devices").append("<div><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "<img src=images/" + result[i]["D_ImageURL"] +"></a></div>");
 					}
 				}
 				if (result[0]["ID"] == 1) {
