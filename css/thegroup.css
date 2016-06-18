@@ -1,4 +1,7 @@
 body{
 	background-image: url("../images/italy.jpg");
-	border-image-repeat: no repeat;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: black;
+	color: white;
 }
