@@ -2,35 +2,23 @@ $(document).ready(function(){
 	$.get("assistance.php?category=\"Technical Support\"",function(data, status) {
 		if(status == "success") {
 			result = JSON.parse(data);
-			for (i = 0; i < result.length; i++) { //THIS WILL BE MOVED TO A FUNCTION IN ORDER NOT TO COPY PASTE CODE
+			for (i = 0; i < result.length; i++) {
+				var container;
 				if (result[i]["SubCategory"] == "Smartphone and Tablet") {
-					$('#smartphonetablets').append(
-						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" + //must link to an html instead
-							"<div class=\"col-sm-6\">" + 
-								result[i]["Name"] +
-								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-							"</div>" +
-						"</a>"
-					)
+					container = $('#smartphonetablets')
 				} else if (result[i]["SubCategory"] == "ADSL") {
-					$('#adsl').append(
-						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" + //must link to an html instead
-							"<div class=\"col-sm-6\">" + 
-								result[i]["Name"] +
-								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-							"</div>" +
-						"</a>"
-					)
+					container = $('#adsl');
 				} else if (result[i]["SubCategory"] == "Mail") {
-					$('#mail').append(
-						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" + //must link to an html instead
-							"<div class=\"col-sm-6\">" + 
-								result[i]["Name"] +
-								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-							"</div>" +
-						"</a>"
-					)
+					container = $('#mail');
 				}
+				container.append(
+					"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" +
+						"<div class=\"col-sm-6\">" + 
+							result[i]["Name"] +
+							"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+						"</div>" +
+					"</a>"
+				)
 			}
 		}
 		else if(status == "error") {
