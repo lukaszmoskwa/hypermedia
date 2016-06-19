@@ -1,6 +1,9 @@
 $(document).ready(function(){
 	devices = show("devices");
 	smartlife = show("smartlife");
+	if ((devices.length + smartlife.length) == 0) {
+		$("form").html("<h3>Your cart is empty</h3>");
+	}
 	$.get("devices.php",function(data, status) {
 		result = JSON.parse(data);
 		if(status == "success") {
