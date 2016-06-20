@@ -6,7 +6,7 @@ $(document).ready(function(){
 				if (result[i]["Description"] != null) { //if the link is "clickable"
 					$('#smartphones').append(
 						"<a href=\"device.html?id=" + result[i]["ID"] + "\">" +
-							"<div class=\"col-sm-6\">" + 
+							"<div class=\"col-sm-4\">" + 
 								result[i]["Name"] +
 								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 							"</div>" +
@@ -14,7 +14,7 @@ $(document).ready(function(){
 					)
 				} else {
 					$('#smartphones').append(
-						"<div class=\"col-sm-6\">" + 
+						"<div class=\"col-sm-4\">" + 
 							result[i]["Name"] +
 							"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 						"</div>"
