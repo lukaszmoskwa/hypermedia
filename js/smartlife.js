@@ -19,7 +19,9 @@ $(document).ready(function(){
 				$("#description").append(result[0]["Description"]);
 				$("#activationandrules").append(result[0]["ActivationAndRules"]);
 				$("#price").text(result[0]["Price"]);
-				$("#oldprice").text(result[0]["OldPrice"]);
+				if (result[0]["OldPrice"]!=null) {
+					$("#oldprice").html("<s>" + result[0]["OldPrice"] + "</s>");
+				}
 
 				found = false;
 				$.getScript("js/cookie.js", function() { //we defined the function to manipulate cookies here
