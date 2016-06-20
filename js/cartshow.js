@@ -15,7 +15,7 @@ $(document).ready(function(){
 										result[i]["Name"] +
 										"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 									"</a>" +
-									"<button class=\"removecartdevice\" id=\"" + result[i]["ID"] + "\">Remove From Cart</button>" +
+									"<button class=\"removecartdevice\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 								"</div>"
 							)
 						} else {
@@ -23,7 +23,7 @@ $(document).ready(function(){
 								"<div class=\"col-md-6\" id=device" + result[i]["ID"] + ">" + 
 									result[i]["Name"] +
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-									"<button class=\"removecartdevice\" id=\"" + result[i]["ID"] + "\">Remove From Cart</button>" +
+									"<button class=\"removecartdevice\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 								"</div>"
 							)
 						}
@@ -47,7 +47,7 @@ $(document).ready(function(){
 										result[i]["Name"] +
 										"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 									"</a>" +
-									"<button class=\"removecartsl\" id=\"" + result[i]["ID"] + "\">Remove From Cart</button>" +
+									"<button class=\"removecartsl\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 								"</div>"
 							)
 						} else {
@@ -55,7 +55,7 @@ $(document).ready(function(){
 								"<div class=\"col-md-6\" id=smartlife" + result[i]["ID"] + ">" + 
 									result[i]["Name"] +
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-									"<button class=\"removecartsl\" id=\"" + result[i]["ID"] + "\">Remove From Cart</button>" +
+									"<button class=\"removecartsl\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 								"</div>"
 							)
 						}
