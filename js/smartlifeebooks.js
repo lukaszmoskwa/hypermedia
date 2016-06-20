@@ -7,11 +7,11 @@ $(document).ready(function(){
 					for (i = 0; i < result.length; i++) {
 						$('#ebooks').append(
 							"<div class=\"col-sm-6\">" +
-								"<a href=\"smartlifesingle.html?id=" + result[i]["ID"] + "\">" + 
+								//"<a href=\"smartlifesingle.html?id=" + result[i]["ID"] + "\">" + 
 									result[i]["Name"] +
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 									result[i]["Price"] +
-								"</a>" +
+								//"</a>" +
 								"<button class=\"addcart\" id=\"" + result[i]["ID"] + "\">Add To Cart</button>" +
 								"<button class=\"removecart\" id=\"" + result[i]["ID"] + "\">Remove From Cart</button>" +
 							"</div>"

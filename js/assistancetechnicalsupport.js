@@ -11,14 +11,23 @@ $(document).ready(function(){
 				} else if (result[i]["SubCategory"] == "Mail") {
 					container = $('#mail');
 				}
-				container.append(
-					"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" +
+				if (result[i]["Description"] != null) { //if the link is "clickable"
+					container.append(
+						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" +
+							"<div class=\"col-sm-6\">" + 
+								result[i]["Name"] +
+								"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
+							"</div>" +
+						"</a>"
+					)
+				} else {
+					container.append(
 						"<div class=\"col-sm-6\">" + 
 							result[i]["Name"] +
 							"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-						"</div>" +
-					"</a>"
-				)
+						"</div>"
+					)
+				}
 			}
 		}
 		else if(status == "error") {
