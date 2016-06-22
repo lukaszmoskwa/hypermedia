@@ -2,9 +2,9 @@
 
 	display: inline-block;
 
-	width: 30vw;
+	width: 50vw;
 	border: 0.5vw solid blue;
-	border-radius: 30%;
+	border-radius: 15%;
 }
 .moveup{
 	vertical-align: middle;
@@ -13,5 +13,5 @@
 	
 }
 .assistance-icons{
-	/*float: right;*/
+	float: right;
 }
