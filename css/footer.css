@@ -1,7 +1,26 @@
+hr{
+	margin-left: 5%;
+    margin-right: 5%;
+    border-top: 1px solid #254d74;
+    margin-bottom: 1%;
+}
 footer{
 	background-color: #00001a;
 	text-align: center;
 }
+#padding{
+	padding-bottom: 1.5%;
+}
 .footertext{
-	color: white;
+	color: #254d74;
+}
+.img-map{
+	height: 25%;
+	width: 25%;
+	padding-top: 2%;	
+}
+.img-small{
+	height: 15%;
+	width: 15%;
+	padding-top: 2%;	
 }
