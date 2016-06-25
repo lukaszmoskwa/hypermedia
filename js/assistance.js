@@ -16,7 +16,7 @@ $(document).ready(function(){
 				$("#faq").append(result[0]["FAQ"]);
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["D_ID"] != null) {
-						$("#devices").append("<div><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "</a></div>");
+						$("#devices").append("<div class=\"col-sm-6	\"><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "<img class=\"img-responsive\"src=images/" + result[i]["ImageURL"] + "></a></div>");
 					}
 				}
 			}
