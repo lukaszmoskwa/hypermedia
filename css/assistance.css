@@ -15,3 +15,6 @@
 .assistance-icons{
 	float: right;
 }
+li {
+	list-style-position:inside
+}

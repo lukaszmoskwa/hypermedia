@@ -13,17 +13,17 @@ $(document).ready(function(){
 				}
 				if (result[i]["Description"] != null) { //if the link is "clickable"
 					container.append(
-						"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" +
-							"<div class=\"col-sm-12\">" + 
+						"<li>" +
+							"<a href=\"assistancesingle.html?id=" + result[i]["ID"] + "\">" +
 								result[i]["Name"] +
-							"</div>" +
-						"</a>"
+							"</a>" +
+						"</li>"
 					)
 				} else {
 					container.append(
-						"<div class=\"col-sm-12\">" + 
+						"<li>" +
 							result[i]["Name"] +
-						"</div>"
+						"</li>"
 					)
 				}
 			}
