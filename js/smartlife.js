@@ -52,7 +52,11 @@ $(document).ready(function(){
 				});
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["D_ID"] != null) {
-						$("#devices").append("<div class=\"col-sm-6\"><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "<img class=\"img-responsive\"src=images/" + result[i]["D_ImageURL"] +"></a></div>");
+						if (result[i]["D_D"] != null) {
+							$("#devices").append("<div class=\"col-sm-6\"><a href=\"device.html?id=" + result[i]["D_ID"] + "\">" + result[i]["D_Name"] + "<img class=\"img-responsive\"src=images/" + result[i]["D_ImageURL"] +"></a></div>");
+						} else {
+							$("#devices").append("<div class=\"col-sm-6\">" + result[i]["D_Name"] + "<img class=\"img-responsive\"src=images/" + result[i]["D_ImageURL"] +"></div>");
+						}
 					}
 				}
 				if (result[0]["ID"] == 1) {
