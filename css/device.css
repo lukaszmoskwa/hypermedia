@@ -5,19 +5,11 @@
 .oldprice{
 	font-size: 170%;
 	color: black;
-	padding-bottom: 2%;	
+	padding-bottom: 2%;
 }
 .blue_style{
-
 	color: blue;
 	font-family: monospace;
 	font-size: 130%;
 	padding-bottom: 2%;
-}
-.button{
-
-	font-size: 130%;
-	font-weight: bold;
-	background-color: #000066;
-	color: white;
 }
