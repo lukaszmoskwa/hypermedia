@@ -39,7 +39,7 @@ $(document).ready(function(){
 						}
 					});
 				});
-				
+
 				$("#addcart").click(function(){
 					addItem("devices",result[0]["ID"]);
 					$("#addcart").hide();
@@ -52,9 +52,17 @@ $(document).ready(function(){
 				});
 				for (i = 0; i < result.length; i++) {
 					if (result[i]["SL_ID"] != null) {
-						$("#smartlife").append("<div><a href=\"smartlifesingle.html?id=" + result[i]["SL_ID"] + "\">" + result[i]["SL_Name"] + "</a></div>");
+						if (result[i]["SL_D"] != null) {
+							$("#smartlife").append("<div><a href=\"smartlifesingle.html?id=" + result[i]["SL_ID"] + "\">" + result[i]["SL_Name"] + "</a></div>");
+						} else {
+							$("#smartlife").append("<div>" + result[i]["SL_Name"] + "</div>");
+						}
 					} else if (result[i]["A_ID"] != null) {
-						$("#assistance").append("<div><a href=\"assistancesingle.html?id=" + result[i]["A_ID"] + "\">" + result[i]["A_Name"] + "</a></div>");
+						if (result[i]["A_D"] != null) {
+							$("#assistance").append("<div><a href=\"assistancesingle.html?id=" + result[i]["A_ID"] + "\">" + result[i]["A_Name"] + "</a></div>");
+						} else {
+							$("#assistance").append("<div>" + result[i]["A_Name"] + "</div>");
+						}
 					}
 				}
 			}
