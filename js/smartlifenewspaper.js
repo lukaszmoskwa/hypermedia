@@ -6,7 +6,7 @@ $(document).ready(function(){
 				$.getScript("js/cart.js", function() { //we defined the function to manipulate the cart here
 					for (i = 0; i < result.length; i++) {
 						$('#newspaper').append(
-							"<div class=\"col-sm-6\">" + 
+							"<div class=\"col-sm-12\" aglign\"center\">" + 
 								//"<a href=\"smartlife.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
 									result[i]["Name"] +
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +

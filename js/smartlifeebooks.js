@@ -6,8 +6,8 @@ $(document).ready(function(){
 				$.getScript("js/cart.js", function() { //we defined the function to manipulate the cart here
 					for (i = 0; i < result.length; i++) {
 						$('#ebooks').append(
-							"<div class=\"col-sm-6\">" +
-								//"<a href=\"smartlifesingle.html?id=" + result[i]["ID"] + "\">" + 
+							"<div class=\"col-sm-12\" align=\"center\">" +
+								//"<a href=\"smartlifesingle.html?id=" + result[i]["ID"] + "\">" +
 									result[i]["Name"] +
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 									result[i]["Price"] +
