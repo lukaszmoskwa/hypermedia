@@ -17,6 +17,8 @@ The form for general request of info is under assistance page.
 
 Unfortunately PhoneGap doesn't support cookies so the cart doesn't work on the android app.
 
+**The website is hosted [here](http://hypermedia.sytes.net)**
+
 **Group members:**
 +	**Mazzoni Emanuele**
 +	**Micucci Andrea**
