@@ -1,0 +1,20 @@
+.blue-container{
+
+	display: inline-block;
+
+	width: 50vw;
+	border: 0.5vw solid blue;
+	border-radius: 15%;
+}
+.moveup{
+	vertical-align: middle;
+	align-items: center;
+	padding-top: 1vw;
+	
+}
+.assistance-icons{
+	float: right;
+}
+li {
+	list-style-position:inside
+}

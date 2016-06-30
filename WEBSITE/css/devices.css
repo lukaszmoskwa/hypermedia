@@ -1,0 +1,8 @@
+p {
+	/*font-family: monospace;;
+	font-size: 18px;*/
+}
+
+.column{
+	flex-direction: column;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Smart Life Service</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
+		<link rel="stylesheet" href="css/cart.css">
+		<link rel="stylesheet" href="css/button.css">
+
+		<!-- jQuery library -->
+		<script src="js/jquery-1.12.0.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="js/bootstrap.min.js"></script> <!-- 3.3.6 -->
+		<script src="js/header.js"></script> <!-- script per header -->
+		<script src="js/footer.js"></script> <!-- script per footer -->
+		<script src="js/smartlife.js"></script>
+	</head>
+	<body data-spy="scroll" data-target=".navbar">
+		<div id="header"></div>
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="smartlife.html">Smart Life</a></li>
+				<li><a id="slcategory"></a>
+				<li class="active"><a id="slpath"></a></li>
+			</ul>
+			<div id="smartlife">
+				<div class="row">
+					<div class="col-xs-6">
+						<h1 id="title"></h1>
+						<img id="image" class="img-responsive">
+					</div>
+					<div class="col-xs-6">
+							<div id="description">
+								<h2>Description:</h2>
+							</div>
+							<div id="activationandrules">
+								<h2>Activation and Rules:</h2>
+							</div>
+							<div id="price"></div>
+							<div id="oldprice"></div>
+								<button id="addcart" class="button btn">Add to cart<img src="images/menu_icons/white_basket.png"></button><!--col-xs-3 col-md-offset-7-->
+								<button id="removecart" class="button btn">Remove from cart<img src="images/menu_icons/white_basket.png"></button>
+					</div>
+				</div>
+				<hr>
+				<div class="row" id="subcategory" hidden>
+					<div class="row">
+						<div class="col-xs-4" align="center"><a href="smartlifeebooks.html"><img class="img-responsive buttone" src="images/eBook.png"><button id="category" class="btn">eBooks<br></button></a></div>
+						<div class="col-xs-4" align="center"><a href="smartlifenewspaper.html"><img class="img-responsive buttone" src="images/Quotidiani-6.jpg"><button id="category" class="btn">Newspaper<br></button></a></div>
+						<div class="col-xs-4" align="center"><a href="smartlifemagazine.html"><img class="img-responsive buttone" src="images/magazine.png"><button id="category" class="btn">Magazine<br></button></a></div>
+					</div>
+				</div>
+				<br>
+				<div id="devices" class="row">
+          			<h3>List of compatible Devices with this SL Service</h3>
+          			<hr>
+        		</div>
+			</div>
+			<footer></footer>
+		</div>
+	</body>
+</html>

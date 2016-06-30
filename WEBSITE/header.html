@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="css/navbar.css">
+<script src="js/navbar.js"></script>
+<script src="js/cookie.js"></script> <!-- script per manipolare i cookie -->
+<script src="js/cart.js"></script> <!-- script per manipolare il carrello -->
+<!-- <script src="js/cartcount.js"></script> <!-- script per contare il numero di elementi nel carrello -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+	<!--<div class="container"> -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" id="menu-toggle" data-toggle="collapse"> <!-- data-target="#Navbar" -->
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html"> <img src="images/logo_tim_small_2016.png"> </a> 
+			<!--<a id="menu-toggle" href="#" class="navbar-toggle">
+					<span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			</a>
+  			<a class="navbar-brand" href="#">
+  				logo
+  			</a> -->
+			<a href="cart.html" class="navbar-brand cart show-only-small-screen" id="cart"><span class="glyphicon glyphicon-shopping-cart"></span> (0)</a> <!-- will be changed with the number of cart items -->
+		</div>
+		<div class="collapse navbar-collapse" id="Navbar">
+			<ul class="nav navbar-nav">
+				<!-- <li class="active"><a href="#welcome">Welcome</a></li>
+				<li><a href="#me">About Me</a></li>
+				<li><a href="#projects">My Projects</a></li>
+				<li><a href="#page4">Contacts</a></li> -->
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="cart.html" class="cart"><span class="glyphicon glyphicon-shopping-cart"></span> (0)</a> <!-- will be changed with the number of cart items --> <!-- navbar-brand -->
+				<li><a href="whoweare.html">Who we are</a></li> <!-- <li class="active"> -->
+				<li><a href="thegroup.html">The Group</a></li>
+			</ul>
+		</div>
+		<div id="sidebar-wrapper" class="sidebar-toggle">
+			<ul class="sidebar-nav">
+		    	<li>
+		      		<a href="promo.html"><img src="images/menu_icons/promotions_icon.png" class="img-resposive">
+		      		Promotions</a>
+		    	</li>
+		    	<li>
+		      		<a href="devices.html"><img src="images/menu_icons/devices_icon.png" class="img-resposive">Devices</a>
+		    	</li>
+		    	<li>
+		      		<a href="smartlife.html"><img src="images/menu_icons/smartlife_icon.png" class="img-resposive">Smart Life Services</a>
+		    	</li>
+		    	<li>
+		      		<a href="assistance.html"><img src="images/menu_icons/assistance_icon.png" class="img-resposive">Assistance</a>
+		    	</li>
+		    	<li>
+		      		<a href="highlights.html"><img src="images/menu_icons/highlights_icon.png" class="img-resposive">Highlights</a>
+		    	</li>
+		    	<li class="show-only-small-screen">
+		      		<a href="whoweare.html"><img src="images/menu_icons/who_icon.png" class="img-resposive">Who we are</a>
+		    	</li>
+		    	<li class="show-only-small-screen">
+		      		<a href="thegroup.html"><img src="images/menu_icons/thegroup_icon.png" class="img-resposive">The Group</a>
+		    	</li>
+		  	</ul>
+		</div>
+  	<!--</div> -->
+</nav>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Ask your questions!</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css"> <!-- 3.3.6 -->
+		<link rel="stylesheet" href="css/assistance.css">
+		<link rel="stylesheet" href="css/common.css">
+
+
+		<!-- jQuery library -->
+		<script src="js/jquery-1.12.0.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="js/bootstrap.min.js"></script> <!-- 3.3.6 -->
+		<script src="js/header.js"></script> <!-- script per header -->
+		<script src="js/footer.js"></script> <!-- script per footer -->
+		<script src="js/messages.js"></script> <!-- script per mostrare il messaggio quando si clicca il tasto Send -->
+</head>
+	<body data-spy="scroll" data-target=".navbar">
+		<div id="header"></div>
+		<div class="container">
+			<ul class="breadcrumb">
+				<li><a href="assistance.html">Assistance</a></li>
+				<li class="active"><a href="informs.html">Ask your questions!</a></li>
+			</ul>
+			<h1>Ask your questions!</h1>
+			<p>If you didn't find your question in the main categories, write it in this fields with your E-mail, and we will answer to you!</p>
+			<form>
+				<div class="row">
+					<div class="col-xs-offset-1 col-xs-3">
+						Question:
+						<input type="text" name="Question" size="35" height="50">
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-xs-offset-1 col-xs-3">
+						E-mail:
+						<input type="text" name="E-mail">
+					</div>
+				</div>
+				<br>
+				<div class="row">
+					<div class="col-xs-offset-1 col-xs-3">
+						<input type="submit" id="sendmessage" value="Send">
+						</div>
+				</div>
+				<br>
+			</form>
+			<footer></footer>
+		</div>
+</body>
+</html>

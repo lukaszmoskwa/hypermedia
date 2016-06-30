@@ -1,0 +1,10 @@
+body{
+	background-image: url("../images/italy.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: black;
+	color: white;
+}
+.breadcrumb {
+	background-color: black;
+}
