@@ -1,7 +1,9 @@
 hr{
+	border-top: 1px solid #254d74;
+}
+.footer-line{
 	margin-left: 5%;
     margin-right: 5%;
-    border-top: 1px solid #254d74;
     margin-bottom: 1%;
 }
 footer{
