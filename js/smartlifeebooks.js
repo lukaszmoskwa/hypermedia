@@ -12,8 +12,8 @@ $(document).ready(function(){
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 									result[i]["Price"] +
 								//"</a>" +
-								"<button class=\"addcart\" id=\"" + result[i]["ID"] + "\">Add To Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
-								"<button class=\"removecart\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
+								"<button class=\"addcart btn\" id=\"" + result[i]["ID"] + "\">Add To Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
+								"<button class=\"removecart btn\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 							"</div>"
 						)
 						found = false;

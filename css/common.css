@@ -8,12 +8,12 @@ e il titolo della pagina in CSS*/
 	font-size: 1.7vw;
 }
 .icons {
-	padding-top: 1vw;	
+	padding-top: 1vw;
 }
 .container {
 	/*Queste impostazioni sono per i contenuti non cliccabili*/
-	color: black;
-	
+	/*color: black;*/
+
 }
 .container a:visited{
 	/*Queste impostazioni sono per i contenuti cliccabili*/
