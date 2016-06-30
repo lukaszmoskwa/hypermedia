@@ -10,20 +10,22 @@ $(document).ready(function(){
 					if (result[i]["ID"] == devices[j]) {
 						if (result[i]["Description"] != null) { //if the link is "clickable"
 							$("#cartdevices").append(
-								"<div class=\"col-md-6\" id=device" + result[i]["ID"] + ">" + 
+								"<div class=\"col-md-6\" id=device" + result[i]["ID"] + ">" +
 									"<a href=\"device.html?id=" + result[i]["ID"] + "\">" +
 										result[i]["Name"] +
 										"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 									"</a>" +
-									"<button class=\"removecartdevice\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
+									"<br>" +
+									"<button class=\"btn removecartdevice\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 								"</div>"
 							)
 						} else {
 							$("#cartdevices").append(
-								"<div class=\"col-md-6\" id=device" + result[i]["ID"] + ">" + 
+								"<div class=\"col-md-6\" id=device" + result[i]["ID"] + ">" +
 									result[i]["Name"] +
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-									"<button class=\"removecartdevice\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
+									"<br>" +
+									"<button class=\"btn removecartdevice\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 								"</div>"
 							)
 						}
@@ -42,20 +44,22 @@ $(document).ready(function(){
 					if (result[i]["ID"] == smartlife[j]) {
 						if (result[i]["Description"] != null) { //if the link is "clickable"
 							$("#cartsl").append(
-								"<div class=\"col-md-6\" id=smartlife" + result[i]["ID"] + ">" + 
+								"<div class=\"col-md-6\" id=smartlife" + result[i]["ID"] + ">" +
 									"<a href=\"smartlifesingle.html?id=" + result[i]["ID"] + "\">" +
 										result[i]["Name"] +
 										"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 									"</a>" +
-									"<button class=\"removecartsl\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
+									"<br>" +
+									"<button class=\"btn removecartsl\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 								"</div>"
 							)
 						} else {
 							$("#cartsl").append(
-								"<div class=\"col-md-6\" id=smartlife" + result[i]["ID"] + ">" + 
+								"<div class=\"col-md-6\" id=smartlife" + result[i]["ID"] + ">" +
 									result[i]["Name"] +
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
-									"<button class=\"removecartsl\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
+									"<br>" +
+									"<button class=\"btn removecartsl\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 								"</div>"
 							)
 						}
