@@ -6,14 +6,14 @@ $(document).ready(function(){
 				$.getScript("js/cart.js", function() { //we defined the function to manipulate the cart here
 					for (i = 0; i < result.length; i++) {
 						$('#magazine').append(
-							"<div class=\"col-sm-12\" align\"center\">" + 
+							"<div class=\"col-sm-12\" align=\"center\">" +
 								//"<a href=\"smartlife.php?id=" + result[i]["ID"] + "\">" + //must link to an html instead
 									result[i]["Name"] +
 									"<img class=\"img-responsive\" src=\"images\/" + result[i]["ImageURL"] + "\" alt=\"" + result[i]["Name"] + "\">" +
 									result[i]["Price"] +
 								//"</a>" +
-								"<button class=\"addcart\" id=\"" + result[i]["ID"] + "\">Add To Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
-								"<button class=\"removecart\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
+								"<button class=\"addcart btn\" id=\"" + result[i]["ID"] + "\">Add To Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
+								"<button class=\"removecart btn\" id=\"" + result[i]["ID"] + "\">Remove From Cart<img src=\"images/menu_icons/white_basket.png\"></button>" +
 							"</div>"
 						)
 						found = false;
