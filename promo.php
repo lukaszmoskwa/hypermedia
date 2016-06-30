@@ -12,10 +12,10 @@
 		    }
 		    //echo json_encode($res);
 		} else {
-		    //echo "0 results"; //maybe print a better message
+		    //echo "0 results";
 		}
 	}
-	
+
 	//header('Content-type: application/json'); //we encode our result in json
 
 	// Check connection
@@ -24,14 +24,12 @@
 	}
 	//echo "Connected successfully";
 
-	//$sql = "SELECT * FROM Devices WHERE OldPrice IS NOT NULL UNION SELECT * FROM SmartLife WHERE OldPrice IS NOT NULL"; //SmartLife is missing (maybe also don't use * if we don't need all the data)
-	//query($sql);
-	$sql = "SELECT * FROM Devices WHERE OldPrice IS NOT NULL"; //SmartLife is missing (maybe also don't use * if we don't need all the data)
+	$sql = "SELECT * FROM Devices WHERE OldPrice IS NOT NULL";
 	query($sql);
-	$sql = "SELECT * FROM SmartLife WHERE OldPrice IS NOT NULL"; //SmartLife is missing (maybe also don't use * if we don't need all the data)
+	$sql = "SELECT * FROM SmartLife WHERE OldPrice IS NOT NULL";
 	query($sql);
 
 	echo json_encode($res);
 
 	$conn->close();
-?> 
+?>

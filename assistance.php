@@ -12,7 +12,7 @@
 		    }
 		    //echo json_encode($res);
 		} else {
-		    //echo "0 results"; //maybe print a better message
+		    //echo "0 results";
 		}
 	}
 
@@ -24,21 +24,21 @@
 	}
 	//echo "Connected successfully";
 
-	if (isset($_GET["id"])) { //da mettere in sicurezza!
-		//$sql = "SELECT * FROM Assistance WHERE ID=" . $_GET["id"]; //da mettere in sicurezza!
-		$sql = "SELECT A.ID, A.Category, A.Name, A.Description, A.FAQ, D.ID AS D_ID, D.Name AS D_Name, ImageURL FROM Devices AS D INNER JOIN DevicesAssistance AS DA ON D.ID = DA.IDDevices INNER JOIN Assistance AS A ON DA.IDAssistance = A.ID WHERE A.ID=" . $_GET["id"]; //da mettere in sicurezza!
-	} elseif (isset($_GET["highlight"])) { //da mettere in sicurezza!
-		$sql = "SELECT * FROM Assistance WHERE Highlight=" . $_GET["highlight"]; //da mettere in sicurezza!
-	} elseif (isset($_GET["category"])) { //da mettere in sicurezza!
-		$sql = "SELECT * FROM Assistance WHERE Category=" . $_GET["category"]; //da mettere in sicurezza!
+	if (isset($_GET["id"])) {
+		//$sql = "SELECT * FROM Assistance WHERE ID=" . $_GET["id"];
+		$sql = "SELECT A.ID, A.Category, A.Name, A.Description, A.FAQ, D.ID AS D_ID, D.Name AS D_Name, ImageURL FROM Devices AS D INNER JOIN DevicesAssistance AS DA ON D.ID = DA.IDDevices INNER JOIN Assistance AS A ON DA.IDAssistance = A.ID WHERE A.ID=" . $_GET["id"];
+	} elseif (isset($_GET["highlight"])) {
+		$sql = "SELECT * FROM Assistance WHERE Highlight=" . $_GET["highlight"];
+	} elseif (isset($_GET["category"])) {
+		$sql = "SELECT * FROM Assistance WHERE Category=" . $_GET["category"];
 	}
-	else { //do we use this?
+	else {
 		$sql = "SELECT * FROM Assistance";
 	}
-	
+
 	query($sql);
 
 	echo json_encode($res);
 
 	$conn->close();
-?> 
+?>
