@@ -21,6 +21,9 @@ $(document).ready(function(){
 				$("#price").text(result[0]["Price"]);
 				if (result[0]["OldPrice"]!=null) {
 					$("#oldprice").html("<s>" + result[0]["OldPrice"] + "</s>");
+				} else {
+					$('#oldprice').hide();
+					$('#price').addClass("col-md-offset-6").removeClass("col-xs-2").addClass("col-xs-4");
 				}
 
 				found = false;
