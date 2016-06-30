@@ -30,7 +30,7 @@ function resize() {
 		$(".show-only-small-screen").hide();
 	}else{
 		document.getElementsByClassName("sidebar-toggle")[0].style.left="-200px";
-		document.getElementsByClassName("container")[0].style.paddingLeft="0px"
+		document.getElementsByClassName("container")[0].style.paddingLeft="20px"
 		$(".show-only-small-screen").show();
 	}
 }
