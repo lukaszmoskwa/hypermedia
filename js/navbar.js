@@ -24,7 +24,7 @@ $(document).ready(function(){
 function resize() {
 	var path = $(this);
 	var contW = path.width();
-	if(contW >= 751){
+	if(contW >= 768){
 		document.getElementsByClassName("sidebar-toggle")[0].style.left="200px";
 		document.getElementsByClassName("container")[0].style.paddingLeft="200px"
 		$(".show-only-small-screen").hide();

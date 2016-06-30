@@ -18,7 +18,7 @@ body {
 
 
 #sidebar-wrapper {
-  top: 52px;
+  top: 50px;
   left: -200px;
   width: 200px;
   background-color: #000033;
@@ -33,7 +33,7 @@ body {
   top: 0;
   margin: 0;
   padding: 0;
-  width: 250px;
+  width: 200px;
   list-style: none;
 }
 .sidebar-nav li {
